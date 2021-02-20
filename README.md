@@ -1,2 +1,5 @@
 # leetcode-Solution
-meaningless but comforting to me
+| #    | Github Url | Other |
+| ---- | ---------- | ----- |
+| -    | -          | -     |
+

@@ -1,5 +1,5 @@
 # leetcode-Solution
-| #    | Github Url | Other |
-| ---- | ---------- | ----- |
-| -    | -          | -     |
+| #    | Title | Github Url | Other |
+| ---- | ----- | ---------- | ----- |
+| -    | -     | -          | -     |
 

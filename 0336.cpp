@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 #include <algorithm>
+#include <set>
 
 using namespace std;
 
@@ -59,7 +60,8 @@ public:
 
     vector<vector<int>> palindromePairs(vector<string>& words) {
         Trie t;
-        vector<vector<int>> res;
+        set<vector<int>> res;
+        vector<vector<int>> ans;
         for (int i = 0; i < words.size(); i++) {
             t.insert(words[i], i);
         }
@@ -69,18 +71,18 @@ public:
                 if (is_palindrome(word.begin() + j, word.end())) {
                     int index = t.search(word.begin(), word.begin() + j);
                     if (i != index && index != -1) {
-                        res.push_back({i, index});
+                        res.insert({i, index});
                     }
                 }
                 if (is_palindrome(word.begin(), word.begin() + j)) {
                     int index = t.search(word.begin() + j, word.end());
                     if (i != index && index != -1) {
-                        res.push_back({index, i});
+                        res.insert({index, i});
                     }
                 }
             }
         }
-        return res;
+        return vector<vector<int>>(res.begin(), res.end());
     }
 };
 
